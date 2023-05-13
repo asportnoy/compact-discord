@@ -52,7 +52,7 @@
   }
 
   .platform-osx {
-    & #{$title-class} {
+    #{$title-class} {
       padding-left: 72px;
     }
 
