@@ -1,0 +1,72 @@
+@use "variables.scss" as *;
+@use "utils.scss" as *;
+
+@mixin sidebar() {
+  position: absolute !important;
+  z-index: 1000;
+  overflow: visible;
+  margin-top: 0px !important;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+@mixin tab($icon, $side, $top: 0px, $offset: 0, $hoverOffset: $offset) {
+  @if $side == "right" {
+    $offset: -$offset;
+    $hoverOffset: -$hoverOffset;
+  }
+
+  &:before {
+    @include background-icon($icon);
+
+    display: block;
+    content: "";
+    width: 37.5px;
+    height: 50px;
+    top: calc(50% - $top);
+    transform: translate($offset, -50%);
+    position: absolute;
+    transition: background-color 0.3s ease-in-out;
+    background-color: var(--background-tertiary);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+
+    $border-radius: 25px;
+    @if $side == "left" {
+      border-radius: 0 $border-radius $border-radius 0;
+      background-position: 25% center;
+      left: 0;
+    }
+    @if $side == "right" {
+      border-radius: $border-radius 0 0 $border-radius;
+      background-position: 75% center;
+      right: 0;
+    }
+  }
+
+  &:hover:before {
+    background-color: var(--brand-500);
+    transform: translate($hoverOffset, -50%);
+    z-index: 1001;
+  }
+}
+
+@mixin hover($side, $offset) {
+  &:after {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 100%;
+    top: 0;
+    position: absolute;
+
+    @if $side == "left" {
+      left: $offset;
+    }
+    @if $side == "right" {
+      right: $offset;
+    }
+  }
+}

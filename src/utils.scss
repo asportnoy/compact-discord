@@ -1,0 +1,28 @@
+@use "variables.scss" as *;
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@function icon-color($icon, $color) {
+  $color: str-replace(#{$color}, "#", "%23");
+  $icon: str-replace($icon, "$color", $color);
+
+  @return $icon;
+}
+
+@mixin background-icon($icon) {
+  .theme-dark & {
+    background-image: url(icon-color($icon, $text-dark));
+  }
+  .theme-light & {
+    background-image: url(icon-color($icon, $text-light));
+  }
+}

@@ -1,0 +1,63 @@
+@use "variables.scss" as *;
+@use "utils.scss" as *;
+@use "mixins.scss" as *;
+
+@media (max-width: $member-list-collapse) {
+  #{$member-list-class} {
+    @include sidebar();
+    right: 0;
+    transform: translateX($member-list-width);
+
+    @include tab($member-icon, "right", 8px, $member-list-width);
+    @include hover("right", $member-list-width);
+
+    &:hover {
+      transform: translateX(0px);
+
+      &:before {
+        background-color: var(--brand-500);
+      }
+    }
+  }
+}
+
+@media (max-width: $channel-list-collapse) {
+  #{$guild-list-class} {
+    @include sidebar();
+    left: 0;
+    transform: translateX(-$guild-list-width - $channel-list-width);
+
+    @include tab($channel-icon, "left", 0px, $guild-list-width + $channel-list-width);
+    @include hover("left", $guild-list-width + $channel-list-width);
+
+    &:hover,
+    &:has(+ div #{$channel-list-class}:hover) {
+      transform: translateX(0px);
+
+      &:before {
+        background-color: var(--brand-500);
+      }
+    }
+  }
+
+  #{$channel-list-class} {
+    @include sidebar();
+    left: 0;
+    transform: translateX(-$channel-list-width);
+
+    &:hover,
+    #{$guild-list-class}:hover + div & {
+      transform: translateX($guild-list-width);
+    }
+  }
+
+  .platform-osx {
+    & #{$title-class} {
+      padding-left: 72px;
+    }
+
+    #{$guild-list-class} {
+      padding-top: 32px;
+    }
+  }
+}

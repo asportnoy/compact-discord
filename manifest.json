@@ -1,18 +1,18 @@
 {
-  "id": "dev.replugged.ThemeTemplate",
-  "name": "Theme Template",
-  "description": "A theme template",
+  "id": "dev.albertp.CompactDiscord",
+  "name": "Compact Discord",
+  "description": "Hide some elements when Discord is small to save space.",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "asportnoy",
+    "discordID": "489484338514100234",
+    "github": "asportnoy"
   },
   "version": "1.0.0",
   "updater": {
     "type": "github",
-    "id": "replugged-org/theme-template"
+    "id": "asportnoy/compact-discord"
   },
   "license": "MIT",
   "type": "replugged-theme",
-  "main": "src/main.css"
+  "main": "src/main.scss"
 }
