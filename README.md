@@ -4,7 +4,7 @@ Collapse the member and channel lists on small screens to save space.
 
 Member list collapses at 1024px, Channel list collapses at 768px.
 
-[![Install in Replugged](https://img.shields.io/badge/-Install%20in%20Replugged-blue?style=for-the-badge&logo=none)](https://replugged.dev/install?identifier=asportnoy/compact-discord&source=github)
+[![Install in Replugged](https://img.shields.io/badge/-Install%20in%20Replugged-blue?style=for-the-badge&logo=none)](https://replugged.dev/install?identifier=dev.albertp.CompactDiscord)
 
 ![Demo](demo.gif)
 

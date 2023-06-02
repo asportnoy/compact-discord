@@ -9,8 +9,8 @@
   },
   "version": "1.0.2",
   "updater": {
-    "type": "github",
-    "id": "asportnoy/compact-discord"
+    "type": "store",
+    "id": "dev.albertp.CompactDiscord"
   },
   "license": "MIT",
   "type": "replugged-theme",
