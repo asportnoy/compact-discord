@@ -14,5 +14,7 @@
   },
   "license": "MIT",
   "type": "replugged-theme",
-  "main": "src/main.scss"
+  "main": "src/main.scss",
+  "source": "https://github.com/asportnoy/compact-discord",
+  "image": "https://i.imgur.com/SxhHR22.gif"
 }
