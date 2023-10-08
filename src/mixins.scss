@@ -8,6 +8,7 @@
   margin-top: 0px !important;
   height: 100%;
   transition: transform 0.3s ease-in-out;
+  min-width: unset;
 }
 
 @mixin tab($icon, $side, $top: 0px, $offset: 0, $hoverOffset: $offset) {
