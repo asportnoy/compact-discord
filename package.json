@@ -11,17 +11,18 @@
     "watch": "replugged build theme --watch",
     "bundle": "replugged bundle theme",
     "lint": "prettier ./src --check",
-    "lint:fix": "prettier ./src --write"
+    "lint:fix": "prettier ./src --write",
+    "release": "replugged release"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/config-default": "^2.9.2",
-    "@parcel/core": "^2.9.2",
-    "@parcel/transformer-sass": "^2.9.2",
-    "@types/node": "^18.16.18",
-    "prettier": "^2.8.8",
-    "replugged": "^4.4.2"
+    "@parcel/config-default": "^2.9.3",
+    "@parcel/core": "^2.9.3",
+    "@parcel/transformer-sass": "^2.9.3",
+    "@types/node": "^20.8.3",
+    "prettier": "^3.0.3",
+    "replugged": "^4.6.5"
   }
 }
