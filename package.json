@@ -1,6 +1,6 @@
 {
   "name": "theme-template",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A theme template",
   "engines": {
     "node": ">=18.0.0",
