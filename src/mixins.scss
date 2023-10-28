@@ -4,7 +4,7 @@
 @mixin sidebar() {
   position: absolute !important;
   z-index: 1000;
-  overflow: visible;
+  overflow: visible !important;
   margin-top: 0px !important;
   height: 100%;
   transition: transform 0.3s ease-in-out;
