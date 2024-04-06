@@ -18,11 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/config-default": "^2.9.3",
-    "@parcel/core": "^2.9.3",
-    "@parcel/transformer-sass": "^2.9.3",
-    "@types/node": "^20.8.3",
-    "prettier": "^3.0.3",
-    "replugged": "^4.6.5"
+    "prettier": "^3.2.5",
+    "replugged": "^4.7.9"
   }
 }
